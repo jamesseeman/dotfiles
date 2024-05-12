@@ -10,10 +10,17 @@ return {
 		vim.keymap.set("n", "<leader>e", ":Neotree filesystem toggle left<CR>", {})
 		vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})
 
-    require('neo-tree').setup({
-      close_if_last_window = true
-    })
+		require("neo-tree").setup({
+			close_if_last_window = true,
+			filesystem = {
+				filtered_items = {
+					hide_dotfiles = false,
+					hide_gitignored = false,
+					hide_hidden = false,
+				},
+			},
+		})
 
-    vim.cmd(':Neotree filesystem reveal left')
+		vim.cmd(":Neotree filesystem reveal left")
 	end,
 }
