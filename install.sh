@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install tmux kitty imagemagick ranger
+sudo apt install tmux kitty imagemagick ranger python3-venv
 
 # Install neovim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
